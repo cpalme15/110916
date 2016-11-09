@@ -3,7 +3,7 @@
 public class Person
 {
 	private String name;
-	private Money salary;  // using class in other classes
+	private Money salary;  // using class in other classes HAS A relationship
 	public Person() // default constructor initialize data members
 	{
 		super();
