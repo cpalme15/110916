@@ -1,4 +1,9 @@
 
+/* COSC 111 11/09/16
+ * 
+ * 
+ */
+public class Classwork 
 {
 
 	public static void main(String[] args) 
@@ -25,6 +30,7 @@
 			//driver=policeman;//makes them one object meaning if you change one you change both, so use the copy constructor
 			Person teacher=new Person("Dan Nelson");
 			System.out.println(teacher.getName());
+			System.out.println(driver.getSalary());
 			
 	}		
 
