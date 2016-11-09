@@ -1,1 +1,31 @@
 
+{
+
+	public static void main(String[] args) 
+	{
+		    Money mywallet=new Money(15, 79);
+		    Money yourWallet= new Money (12,93);
+		    Money ourWallet=Money.add(mywallet, yourWallet);
+		  
+		    mywallet.add(yourWallet);
+			  System.out.println(yourWallet);
+		    Money subtractwallet=Money.minus(yourWallet, mywallet);
+		    System.out.println(subtractwallet);
+		    System.out.println(ourWallet);
+		    
+		    
+			
+			Person policeman=new Person();
+			System.out.println(policeman.getName());
+			policeman.setName("Joe Smith");
+			System.out.println(policeman.getName());
+			Person driver=new Person(policeman);	
+			//driver.setName(policeman.getname());
+			System.out.println(driver.getName());
+			//driver=policeman;//makes them one object meaning if you change one you change both, so use the copy constructor
+			Person teacher=new Person("Dan Nelson");
+			System.out.println(teacher.getName());
+			
+	}		
+
+}
