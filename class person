@@ -1,0 +1,29 @@
+
+public class Person
+{
+	private String name;
+	public Person() // default constructor initialize data members
+	{
+		super();
+		name="John Doe";
+		
+	}
+	public Person(Person temp)// copy constructor assign the data members of the argument to the caller
+	{
+		this.name=temp.name;
+	}
+	
+	public Person(String a)// overload constructor assign the arguments to the caller data members
+	{
+		this.name=a;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String a)
+	{
+		this.name=a;
+	}
+	
+}
