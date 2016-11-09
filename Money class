@@ -1,0 +1,46 @@
+public class Money {
+   private int dollars;
+   private int cents;
+ public Money()
+ {
+	 this.dollars=0;
+	 this.cents=0;
+ }
+public Money( int d, int c)
+{
+	this.dollars=d;
+	this.cents=c;
+}
+public static  Money add(Money M1, Money M2)//class method
+{
+	Money M3= new Money();
+	M3.dollars=M1.dollars+M2.dollars;
+	M3.cents=M1.cents+M2.cents;
+	M3.dollars=M3.dollars+(M3.cents/100);
+	M3.cents=M3.cents%100;
+	return M3;
+}
+public static  Money minus(Money M1, Money M2)
+{
+	Money M3= new Money();
+	M3.dollars=(M1.dollars*100+M1.cents)-(M2.dollars*100+M2.cents);
+	M3.cents=M3.dollars%100;
+	M3.dollars= M3.dollars/100;
+
+	return M3;
+}
+public void add(Money M2)// instance method
+{
+    this.dollars=this.dollars+M2.dollars;
+	this.cents=this.cents+M2.cents;
+	this.dollars=this.dollars+(this.cents/100);
+	this.cents=this.cents%100;
+	
+}
+public String toString()
+{
+	return dollars+ "."+cents;
+
+}
+
+}
