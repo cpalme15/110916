@@ -1,21 +1,26 @@
 
+
 public class Person
 {
 	private String name;
+	private Money salary;  // using class in other classes
 	public Person() // default constructor initialize data members
 	{
 		super();
 		name="John Doe";
+		salary=new Money();// use the default constructor
 		
 	}
 	public Person(Person temp)// copy constructor assign the data members of the argument to the caller
 	{
 		this.name=temp.name;
+		this.salary=temp.salary;
 	}
 	
 	public Person(String a)// overload constructor assign the arguments to the caller data members
 	{
 		this.name=a;
+		this.salary=new Money();
 	}
 	public String getName()
 	{
@@ -24,6 +29,10 @@ public class Person
 	public void setName(String a)
 	{
 		this.name=a;
+	}
+	public Money getSalary()
+	{
+		return salary;
 	}
 	
 }
